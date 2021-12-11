@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -48,31 +49,42 @@
       "react/jsx-filename-extension": [
         "error",
         {
-          "extensions": ["jsx", "tsx"]
+          "extensions": [
+            "jsx",
+            "tsx"
+          ]
         }
       ],
       "import/prefer-default-export": "off",
-      "react/function-component-definition": [2, {
-        "namedComponents":  "arrow-function",
-        "unnamedComponents": "arrow-function" 
-      }]
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function",
+          "unnamedComponents": "arrow-function"
+        }
+      ]
     },
     "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".js", ".jsx", ".ts", ".tsx"],
-          "paths": ["./src"]
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ],
+          "paths": [
+            "./src"
+          ]
         }
       }
     },
-
     "overrides": [
       {
         "files": [
           "**/*.ts?(x)"
         ],
-        "rules": {
-        }
+        "rules": {}
       }
     ]
   },
