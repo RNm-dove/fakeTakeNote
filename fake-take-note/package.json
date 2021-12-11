@@ -10,6 +10,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "next",
@@ -25,7 +29,51 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "airbnb",
+      "airbnb/hooks",
+      "plugin:react/jsx-runtime",
+      "prettier"
+    ],
+    "rules": {
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": ["jsx", "tsx"]
+        }
+      ],
+      "import/prefer-default-export": "off",
+      "react/function-component-definition": [2, {
+        "namedComponents":  "arrow-function",
+        "unnamedComponents": "arrow-function" 
+      }]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"],
+          "paths": ["./src"]
+        }
+      }
+    },
+
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+        }
+      }
     ]
   },
   "browserslist": {
@@ -42,6 +90,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "postcss": "^8.4.4",
     "tailwindcss": "^3.0.1"
   }

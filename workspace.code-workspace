@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "root"
+		},
+		{
+			"path": "docs"
+		},
+		{
+			"path": "fake-take-note"
+		},
+	],
+	"settings": {}
+}

@@ -1,11 +1,6 @@
-import './App.css';
+import "./App.css";
+import { FC } from "react";
 
-const App = () => {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
-}
-
-export default App;
+export const App: FC = () => (
+  <h1 className="text-3xl font-bold underline">Hello world!</h1>
+);
